@@ -1,5 +1,5 @@
 # healthTracker
-Midterm Exam for OOP
+Midterm Exam for SE 1223
 
 Group Members:
 Andrada, Chad Denard & Dela Cruz, Stanhope
