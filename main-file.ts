@@ -108,6 +108,9 @@ abstract class healthTracker implements healthTrackerInterface {
   }
 }
 
+
+
+
 class nutritionPal extends healthTracker {
   private protein: number[];
   private carbs: number[];
@@ -234,6 +237,8 @@ class nutritionPal extends healthTracker {
     }
   }
 }
+
+
 
 //food name, calories (in kcal), protein, carbs, fat (in grams)
 let person1Nutrition: nutritionPal = new nutritionPal("Chad Andrada","Male",20,176,63);
