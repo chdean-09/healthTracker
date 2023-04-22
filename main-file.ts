@@ -337,7 +337,7 @@ class nutritionPal extends healthTracker {
       let proteinPercentage: number = (this.proteinCalc() / this.totalCalories()) * 100;
       let carbsPercentage: number = (this.carbohydratesCalc() / this.totalCalories()) * 100;
       let fatPercentage: number = (this.fatCalc() / this.totalCalories()) * 100;
-      let totalPercentage = proteinPercentage + carbsPercentage + fatPercentage;
+      let totalPercentage: number = proteinPercentage + carbsPercentage + fatPercentage;
 
       let newProteinPercentage: number = (this.proteinCalc() / (this.totalCalories() * (totalPercentage / 100))) * 100;
       let newCarbsPercentage: number = (this.carbohydratesCalc() / (this.totalCalories() * (totalPercentage / 100))) * 100;
