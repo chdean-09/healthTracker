@@ -5,10 +5,13 @@
 // Dela Cruz, Stanhope
 
 interface healthTrackerInterface {
+  displayInfo(): void;
   recordStepCount(steps: number): void;
+  calculateCaloriesBurned(): number;
   logWaterIntake(amountInOunces: number): void;
   logMeal(food: string, calories: number): void;
   recordSleep(sleepDuration: number): void;
+  getBMI(): number;
   setAge(newAge: number): void;
   setWeight(newWeight: number): void;
   setHeight(newHeight: number): void;
@@ -57,7 +60,7 @@ abstract class healthTracker implements healthTrackerInterface {
     }
   }
 
-  protected calculateCaloriesBurned(): number {
+  public calculateCaloriesBurned(): number {
     if (this.gender === "Male") {
       return 88.362 + (13.397 * this.weight) + (4.799 * this.height) - (5.677 * this.age);
     } else if (this.gender === "Female") {
@@ -88,7 +91,7 @@ abstract class healthTracker implements healthTrackerInterface {
     }
   }
 
-  protected getBMI(): number {
+  public getBMI(): number {
     let heightInMeter: number = this.height / 100;
 
     return (this.weight)/(heightInMeter ** 2);
