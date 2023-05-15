@@ -261,8 +261,7 @@ class nutritionPal extends healthTracker {
   // this one also requires an input for protein, carbs, and fat
   public override logMeal(food: string, calories: number, protein?: number, carbs?: number, fat?: number): void {
     if (protein === undefined || carbs === undefined || fat === undefined) {
-      this.food.push(food);
-      this.calories.push(calories);
+      throw new Error("Please input a valid value for calories, protein, carbs, and fats.")
     } else {
       this.food.push(food);
       this.calories.push(calories);
