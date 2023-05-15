@@ -119,19 +119,19 @@ class myHealthApp extends healthTracker {
   // this overrides the displayInfo() from the parent class
   public override displayInfo(): void {
     console.log("==========HEALTH PROFILE==========");
-    console.log(Profile: ${this.name});
-    console.log(Gender: ${this.gender});
-    console.log(Age: ${this.age} years old);
-    console.log(Height: ${this.height} cm);
-    console.log(Weight: ${this.weight} kg);
+    console.log(`Profile: ${this.name}`);
+    console.log(`Gender: ${this.gender}`);
+    console.log(`Age: ${this.age} years old`);
+    console.log(`Height: ${this.height} cm`);
+    console.log(`Weight: ${this.weight} kg`);
     console.log("--------");
-    console.log(BMI Profile: ${this.getBMIResult()});
-    console.log(BMR* (Basal Metabolic Rate): ${this.calculateCaloriesBurned().toFixed(0)} calories/day);
+    console.log(`BMI Profile: ${this.getBMIResult()}`);
+    console.log(`BMR* (Basal Metabolic Rate): ${this.calculateCaloriesBurned().toFixed(0)} calories/day`);
     console.log("--------");
-    console.log(Average steps per day: ${this.getAverageSteps()} steps);
-    console.log(Average water intake per day: ${this.getAverageWaterIntake().toFixed(1)} ounces);
-    console.log(Average calories consumed: ${this.getAverageCalories().toFixed(0)} calories);
-    console.log(Average sleep per night: ${this.getAverageSleepDuration().toFixed(1)} hours);
+    console.log(`Average steps per day: ${this.getAverageSteps()} steps`);
+    console.log(`Average water intake per day: ${this.getAverageWaterIntake().toFixed(1)} ounces`);
+    console.log(`Average calories consumed: ${this.getAverageCalories().toFixed(0)} calories`);
+    console.log(`Average sleep per night: ${this.getAverageSleepDuration().toFixed(1)} hours`);
     console.log("\n*BMR- calories burned per day just by existing");
     console.log("==================================");
   }
@@ -156,13 +156,13 @@ class myHealthApp extends healthTracker {
 
   private getBMIResult(): string {
     if (this.getBMI() < 18.5) {
-      return ${this.getBMI().toFixed(1)} (Underweight);
+      return `${this.getBMI().toFixed(1)} (Underweight)`;
     } else if (this.getBMI() >= 18.5 && this.getBMI() < 24.9) {
-      return ${this.getBMI().toFixed(1)} (Normal weight);
+      return `${this.getBMI().toFixed(1)} (Normal weight)`;
     } else if (this.getBMI() >= 25 && this.getBMI() < 29.9) {
-      return ${this.getBMI().toFixed(1)} (Overweight);
+      return `${this.getBMI().toFixed(1)} (Overweight)`;
     } else {
-      return ${this.getBMI().toFixed(1)} (Obese);
+      return `${this.getBMI().toFixed(1)} (Obese)`;
     }
   }
 
